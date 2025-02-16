@@ -1,4 +1,4 @@
-# Spring-AI cata
+# Spring-AI kata
 
 This is my sandbox for working with Spring AI, and prompt engineering in general: nothing fancy, just learning!
 
