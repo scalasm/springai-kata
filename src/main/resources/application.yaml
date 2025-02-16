@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springai-kata
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+
+# /api-docs endpoint custom path
+springdoc:
+  api-docs:
+    path: /api-docs
