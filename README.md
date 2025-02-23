@@ -10,6 +10,10 @@ This is my sandbox for working with Spring AI, and prompt engineering in general
 
 # How to run
 
+## Option 1 - from Visual Studio Code
+A launch configuration is provided for Visual Studio Code - just create a `.env` file in the workspace root with you `OPENAPI_API_KEY` set.
+
+## Option 2 - Command line
 ```
 mvn spring-boot:run
 ```
