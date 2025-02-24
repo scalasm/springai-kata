@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.v3.oas.annotations.Operation;
 import me.marioscalas.saikata.infrastructure.ai.AIPromptService;
 import me.marioscalas.saikata.infrastructure.ai.Answer;
-import me.marioscalas.saikata.infrastructure.ai.CapitalQuestion;
+import me.marioscalas.saikata.infrastructure.ai.GetCapitalQuestion;
+import me.marioscalas.saikata.infrastructure.ai.GetCapitalResponse;
 import me.marioscalas.saikata.infrastructure.ai.Question;
 
 /**
@@ -35,9 +36,25 @@ public class AIPromptController {
 
     @Operation(summary = "Get the capital of state or country")
     @PostMapping(value = "/capital", produces = "application/json", consumes = "application/json")
-    public ResponseEntity<Answer> submitQuestion(@RequestBody @Valid CapitalQuestion question) {
+    public ResponseEntity<Answer> getCapital(@RequestBody @Valid GetCapitalQuestion question) {
         return ResponseEntity.ok().body(
-            aiPromptService.getCapital(question)    
+            aiPromptService.getCapital(question)
+        );
+    }
+
+    @Operation(summary = "Get the capital of state or country, with additional useful information")
+    @PostMapping(value = "/capitalWithInfo", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Answer> submitQuestionWithInfo(@RequestBody @Valid GetCapitalQuestion question) {
+        return ResponseEntity.ok().body(
+            aiPromptService.getCapitalWithInfo(question)
+        );
+    }
+
+    @Operation(summary = "Get the capital of state or country, with additional useful information in JSON format")
+    @PostMapping(value = "/capitalWithInfoV2", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<GetCapitalResponse> submitQuestionWithInfoV2(@RequestBody @Valid GetCapitalQuestion question) {
+        return ResponseEntity.ok().body(
+            aiPromptService.getCapitalWithInfoV2(question)
         );
     }
 }
