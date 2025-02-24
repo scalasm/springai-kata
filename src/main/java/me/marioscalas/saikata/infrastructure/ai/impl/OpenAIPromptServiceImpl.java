@@ -11,10 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import jakarta.validation.Valid;
-import me.marioscalas.saikata.infrastructure.ApplicationException;
 import me.marioscalas.saikata.infrastructure.ai.AIPromptService;
 import me.marioscalas.saikata.infrastructure.ai.Answer;
 import me.marioscalas.saikata.infrastructure.ai.GetCapitalQuestion;
@@ -35,11 +32,8 @@ public class OpenAIPromptServiceImpl implements AIPromptService {
 
     private final ChatModel chatModel;
     
-    private final ObjectMapper objectMapper;
-    
-    public OpenAIPromptServiceImpl(ChatModel chatModel, ObjectMapper objectMapper) {
+    public OpenAIPromptServiceImpl(ChatModel chatModel) {
         this.chatModel = chatModel;
-        this.objectMapper = objectMapper;
     }
 
     @Override
@@ -89,10 +83,6 @@ public class OpenAIPromptServiceImpl implements AIPromptService {
 
         final ChatResponse chatResponse = chatModel.call(prompt);
 
-        try {
-            return objectMapper.readValue(chatResponse.getResult().getOutput().getText(), GetCapitalResponse.class);
-        } catch (Exception e) {
-            throw new ApplicationException("Error converting response", e);
-        }
+        return converter.convert(chatResponse.getResult().getOutput().getText());
     }
 }
