@@ -5,14 +5,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.2</version>
+		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>me.marioscalas</groupId>
 	<artifactId>springai-kata</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
 	<name>springai-kata</name>
 	<description>Sandbox for Spring-AI kata</description>
+	
 	<url/>
 	
 	<licenses>
@@ -33,8 +36,9 @@
 	<properties>
 		<java.version>21</java.version>
 		<spring-ai.version>1.0.0-M5</spring-ai.version>
-		<spring-modulith.version>1.3.1</spring-modulith.version>
+		<spring-modulith.version>1.3.3</spring-modulith.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
