@@ -47,7 +47,7 @@ public class OpenAIPromptServiceImpl implements AIPromptService {
     }
 
     @Override
-    public Answer getCapital(GetCapitalQuestion question) {
+    public Answer getCapital(@Valid GetCapitalQuestion question) {
         final PromptTemplate promptTemplate = new PromptTemplate(getCapitalPromptTemplate);
         final Prompt prompt = promptTemplate.create(
             Map.of("stateOrCountry", question.stateOrCountry())
@@ -71,7 +71,7 @@ public class OpenAIPromptServiceImpl implements AIPromptService {
     }
 
     @Override
-    public GetCapitalResponse getCapitalWithInfoV2(GetCapitalQuestion question) {
+    public GetCapitalResponse getCapitalWithInfoV2(@Valid GetCapitalQuestion question) {
         final BeanOutputConverter<GetCapitalResponse> converter = new BeanOutputConverter<>(GetCapitalResponse.class);
         final String outputFormat = converter.getFormat();
 
