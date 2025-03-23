@@ -35,4 +35,12 @@ public class RAGAIPromptController {
             aiPromptService.getAnswer(question)    
         );
     }
+
+    @Operation(summary = "Submit a request specifict to boat towing")
+    @PostMapping(value = "/boat-expert-prompt", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<Answer> submitQuestionToTheBoatExpert(@RequestBody @Valid Question question) {
+        return ResponseEntity.ok().body(
+            aiPromptService.getBoatExpertAnswer(question)    
+        );
+    }    
 }
