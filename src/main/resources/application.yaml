@@ -19,4 +19,4 @@ sfg:
   aiapp:
     vectorStorePath: /tmp/vectorstore.json
     documentsToLoad:
-      - /datasets/movies500.csv
+      - /datasets/movies500Trimmed.csv

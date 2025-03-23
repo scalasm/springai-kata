@@ -36,6 +36,9 @@ public class RAGPromptServiceImpl implements RAGPromptService {
     @Value("classpath:/templates/rag-prompt-template.st")
     private Resource ragPromptTemplate;
 
+    @Value("classpath:/templates/rag-prompt-template-with-metadata.st")
+    private Resource ragPromptWithMetadataTemplate;
+
     public RAGPromptServiceImpl(ChatModel chatModel, SimpleVectorStore vectorStore) {
         this.chatModel = chatModel;
         this.vectorStore = vectorStore;
@@ -54,7 +57,7 @@ public class RAGPromptServiceImpl implements RAGPromptService {
         final List<String> documentTexts = matchingDocuments.stream().map(Document::getText).toList();
 
         // Step 2 - Call the chat model including the vector store results and the user input
-        final PromptTemplate promptTemplate = new PromptTemplate(ragPromptTemplate);
+        final PromptTemplate promptTemplate = new PromptTemplate(ragPromptWithMetadataTemplate);
         final Prompt prompt = promptTemplate.create(
             Map.of(
                 "input", question.text(),
