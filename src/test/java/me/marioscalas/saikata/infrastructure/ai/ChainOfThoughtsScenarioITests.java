@@ -37,7 +37,7 @@ public class ChainOfThoughtsScenarioITests {
         ChatResponse response = chatModel.call(promptTemplate.create());
 
         //models previously would answer 27
-        System.out.println(response.getResult().getOutput().getContent());
+        System.out.println(response.getResult().getOutput().getText());
     }
 
     @Test
@@ -56,6 +56,6 @@ public class ChainOfThoughtsScenarioITests {
 
         ChatResponse response = chatModel.call(promptTemplate.create());
 
-        System.out.println(response.getResult().getOutput().getContent());
+        System.out.println(response.getResult().getOutput().getText());
     }
 }

@@ -9,3 +9,10 @@ spring:
 springdoc:
   api-docs:
     path: /api-docs
+
+# Vector Store for RAG  
+sfg:
+  aiapp:
+    vectorStorePath: /tmp/vectorstore.json
+    documentsToLoad:
+      - /datasets/movies500.csv

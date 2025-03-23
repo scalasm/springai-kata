@@ -41,6 +41,6 @@ public class UsingSystemMessagesScenarioITests {
 
         Prompt prompt = new Prompt(messages);
 
-        System.out.println(chatModel.call(prompt).getResult().getOutput().getContent());
+        System.out.println(chatModel.call(prompt).getResult().getOutput().getText());
     }
 }
