@@ -4,6 +4,10 @@ spring:
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
+  # Enable OpenAI optimized model for embeddings
+      embedding:
+        options:
+          model: text-embedding-3-small
 
 # /api-docs endpoint custom path
 springdoc:
