@@ -1,18 +1,19 @@
-package me.marioscalas.saikata.infrastructure.web.ai;
+package me.marioscalas.saikata.ai.adapters.web;
 
 import jakarta.validation.Valid;
+import me.marioscalas.saikata.ai.AIPromptService;
+import me.marioscalas.saikata.ai.RAGPromptService;
+import me.marioscalas.saikata.ai.model.Answer;
+import me.marioscalas.saikata.ai.model.GetCapitalQuestion;
+import me.marioscalas.saikata.ai.model.GetCapitalResponse;
+import me.marioscalas.saikata.ai.model.Question;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import io.swagger.v3.oas.annotations.Operation;
-import me.marioscalas.saikata.infrastructure.ai.AIPromptService;
-import me.marioscalas.saikata.infrastructure.ai.Answer;
-import me.marioscalas.saikata.infrastructure.ai.GetCapitalQuestion;
-import me.marioscalas.saikata.infrastructure.ai.GetCapitalResponse;
-import me.marioscalas.saikata.infrastructure.ai.Question;
-import me.marioscalas.saikata.infrastructure.ai.RAGPromptService;
 
 /**
  * Simple REST API for a chatbot.

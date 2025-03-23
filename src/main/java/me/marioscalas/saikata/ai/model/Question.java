@@ -1,4 +1,4 @@
-package me.marioscalas.saikata.infrastructure.ai;
+package me.marioscalas.saikata.ai.model;
 
 import jakarta.validation.constraints.NotNull;
 import io.swagger.v3.oas.annotations.media.Schema;

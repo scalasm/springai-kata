@@ -1,4 +1,4 @@
-package me.marioscalas.saikata.infrastructure.ai;
+package me.marioscalas.saikata.ai;
 
 import java.util.List;
 

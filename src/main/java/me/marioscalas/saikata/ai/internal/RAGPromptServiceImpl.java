@@ -1,4 +1,4 @@
-package me.marioscalas.saikata.infrastructure.ai.impl;
+package me.marioscalas.saikata.ai.internal;
 
 import java.util.List;
 import java.util.Map;
@@ -14,9 +14,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
-import me.marioscalas.saikata.infrastructure.ai.Answer;
-import me.marioscalas.saikata.infrastructure.ai.Question;
-import me.marioscalas.saikata.infrastructure.ai.RAGPromptService;
+import me.marioscalas.saikata.ai.RAGPromptService;
+import me.marioscalas.saikata.ai.model.Answer;
+import me.marioscalas.saikata.ai.model.Question;
 
 @Service
 public class RAGPromptServiceImpl implements RAGPromptService {
