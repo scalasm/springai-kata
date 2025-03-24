@@ -1,4 +1,4 @@
-package me.marioscalas.saikata.ai.internal;
+package me.marioscalas.saikata.rag.internal;
 
 import java.util.List;
 import java.util.Map;
@@ -16,9 +16,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
-import me.marioscalas.saikata.ai.RAGPromptService;
-import me.marioscalas.saikata.ai.model.Answer;
-import me.marioscalas.saikata.ai.model.Question;
+import me.marioscalas.saikata.rag.model.Answer;
+import me.marioscalas.saikata.rag.model.Question;
+import me.marioscalas.saikata.rag.RAGPromptService;
 
 /**
  * Simple implementation for the RAG Template.
