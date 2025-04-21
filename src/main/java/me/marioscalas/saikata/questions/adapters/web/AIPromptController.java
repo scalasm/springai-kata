@@ -1,11 +1,11 @@
-package me.marioscalas.saikata.ai.adapters.web;
+package me.marioscalas.saikata.questions.adapters.web;
 
 import jakarta.validation.Valid;
-import me.marioscalas.saikata.ai.AIPromptService;
-import me.marioscalas.saikata.ai.model.Answer;
-import me.marioscalas.saikata.ai.model.GetCapitalQuestion;
-import me.marioscalas.saikata.ai.model.GetCapitalResponse;
-import me.marioscalas.saikata.ai.model.Question;
+import me.marioscalas.saikata.questions.AIPromptService;
+import me.marioscalas.saikata.questions.model.Answer;
+import me.marioscalas.saikata.questions.model.GetCapitalQuestion;
+import me.marioscalas.saikata.questions.model.GetCapitalResponse;
+import me.marioscalas.saikata.questions.model.Question;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

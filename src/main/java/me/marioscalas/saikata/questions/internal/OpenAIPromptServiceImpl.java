@@ -1,4 +1,4 @@
-package me.marioscalas.saikata.ai.internal;
+package me.marioscalas.saikata.questions.internal;
 
 import java.util.Map;
 
@@ -12,11 +12,11 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import jakarta.validation.Valid;
-import me.marioscalas.saikata.ai.AIPromptService;
-import me.marioscalas.saikata.ai.model.Answer;
-import me.marioscalas.saikata.ai.model.GetCapitalQuestion;
-import me.marioscalas.saikata.ai.model.GetCapitalResponse;
-import me.marioscalas.saikata.ai.model.Question;
+import me.marioscalas.saikata.questions.AIPromptService;
+import me.marioscalas.saikata.questions.model.Answer;
+import me.marioscalas.saikata.questions.model.GetCapitalQuestion;
+import me.marioscalas.saikata.questions.model.GetCapitalResponse;
+import me.marioscalas.saikata.questions.model.Question;
 
 @Component
 public class OpenAIPromptServiceImpl implements AIPromptService {

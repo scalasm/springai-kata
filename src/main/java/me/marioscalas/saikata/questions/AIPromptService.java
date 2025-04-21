@@ -1,9 +1,9 @@
-package me.marioscalas.saikata.ai;
+package me.marioscalas.saikata.questions;
 
-import me.marioscalas.saikata.ai.model.Answer;
-import me.marioscalas.saikata.ai.model.GetCapitalQuestion;
-import me.marioscalas.saikata.ai.model.GetCapitalResponse;
-import me.marioscalas.saikata.ai.model.Question;
+import me.marioscalas.saikata.questions.model.Answer;
+import me.marioscalas.saikata.questions.model.GetCapitalQuestion;
+import me.marioscalas.saikata.questions.model.GetCapitalResponse;
+import me.marioscalas.saikata.questions.model.Question;
 
 public interface AIPromptService {
     Answer getAnswer(Question question);

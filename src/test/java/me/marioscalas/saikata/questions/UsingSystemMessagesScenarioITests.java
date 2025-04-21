@@ -1,4 +1,4 @@
-package me.marioscalas.saikata.ai;
+package me.marioscalas.saikata.questions;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package me.marioscalas.saikata.ai;
+package me.marioscalas.saikata.questions;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.model.ChatModel;
